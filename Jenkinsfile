@@ -1,5 +1,7 @@
 pipeline{
     agent any
+    environment {
+        PATH = "/opt/apache-maven-3.6.3/bin/mvn:$PATH"
     stages{
         stage('git clone'){
             steps{
